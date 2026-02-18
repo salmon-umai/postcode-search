@@ -1,0 +1,271 @@
+@charset "UTF-8";
+body {
+    margin: 0;
+    padding: 0;
+}
+header h1 {
+    margin: 0px auto 20px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #cc0000;
+    color: #fff;
+}
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#select_All {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#kensaku {
+    padding-left: 20px;
+    color: #cc0000;
+    border-bottom: 2px solid #cc0000;
+    margin-bottom: 10px;
+    max-width: 600px;
+    width: 100%;
+
+}
+span {
+    font-size: 12px;
+    color: red;
+}
+#pref_sel {
+    margin-bottom: 5px;
+    background-color: #ffffff;
+}
+label,
+select,
+input[type=text] {
+    font-size: 13px;
+}
+
+#select {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#pref_sel,
+#post_code,
+#search_keyword {
+    width: 400px;
+    margin-bottom: 10px;
+    height: 25px;
+  }
+
+/*ラジオボタンの装飾*/
+#mode {
+    display: inline-flex;
+    border: 2px solid #cc0000;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 30px;
+}
+
+#mode input[type="radio"] {
+    display: none;
+}
+
+#mode label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    background: #adadad;
+    color: #520808;
+    border-right: 1px solid #cc0000;
+    transition: all 0.2s ease;
+    line-height: 1;
+}
+
+#mode input[type="radio"]:checked+label {
+    background: #cc0000;
+    color: #fff;
+}
+/*ラジオボタンの装飾　END*/
+#btn_All {
+    position: relative;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 10px 60px;
+    border: none;
+    border-radius: 3px;
+    transition: 0.3s ease-in-out;
+    background: #cc0000;
+    cursor: pointer;
+}
+
+#btn_All:hover {
+    background: #960909;
+}
+
+#btn_clear {
+    cursor: pointer;
+    padding: 0 30px;
+    height: 40px;
+    font-size: 12px;
+}
+
+#btn_edit {
+    gap: 15px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#not_found {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+#content {
+    flex: 1;
+}
+
+#result_table {
+    margin: 0;
+}
+
+#map_area {
+    max-width: 600px;
+    margin: auto;
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    display: none;
+}
+
+#map_iframe {
+   width: 100%;
+   height: 100%; 
+}
+
+
+table {
+    display: none;
+    border-collapse: collapse;
+    /*二重線が消える*/
+    background-color: #ffffff;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+caption {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+th,
+td {
+    border: 1px solid #000000;
+    padding: 2px 5px;
+    font-size: 12px;
+}
+
+th {
+    color: #ffffff;
+}
+.th_width {
+    max-width: 90px;
+}
+.th_width2 {
+    max-width: 140px;
+}
+
+thead {
+    background-color: #cc0000;
+}
+
+table tbody tr:hover {
+    background-color: rgb(255, 146, 146);
+    text-decoration: underline #cc0000;
+    cursor: pointer;
+}
+
+#furigana {
+    font-size: 11px;
+}
+
+
+/*ページトップボタン　参考サイト：https://animate-club.com/button/page-top/*/
+.container {
+  padding: 50px 0;
+}
+
+p {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+button {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 80px;
+  right: 20px;
+  bottom: -160px;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  border: 0;
+  background: #fc9c9c;
+  transition: .2s;
+  letter-spacing: 3px;
+  font-weight: bold;
+  border-radius: 100px 100px 0 0;
+}
+
+button i{
+  position: absolute;
+  font-size: 15px;
+  color: #FFF;
+  top: 15px;
+  font-weight: 300;
+}
+
+button p{
+  margin: 0;
+  font-size: 15px;
+  bottom: 13px;
+  position: absolute;
+}
+
+.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+button.is-active {
+  bottom: 0px;
+}
+/*ページトップボタンEND*/
+
+@media(max-width:420px) {
+    .page {
+        width: 100%;
+    }
+    #pref_sel,
+    #post_code,
+    #search_keyword {
+    max-width: 300px;
+  }
+}
